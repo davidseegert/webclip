@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{titlePrefix}}{{title}}</title>
+
+<!-- Charset jetzt UTF-8 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<!-- Neue Style-Datei -->
+<link rel=stylesheet type="text/css" href="styles/main.css">
+
+<!-- Schriften -->
+<link href='./fonts/Source-Sans-Pro/css/fonts.css' rel='stylesheet' type='text/css'>
+<link href='./fonts/Source-Serif-Pro/css/fonts.css' rel='stylesheet' type='text/css'>
+<link href="./fonts/font-awesome/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
+
+
+<script   src="libraries/jquery/jquery-3.1.1.min.js"></script>
+
+
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+</head>
+<body>
+    <div id="wrapper">
+      <header>
+          <div class="nav-toggle hidden">
+            	&#9776;
+          </div>
+          <a href="./">
+            <div class="logo">
+                <div class="title">{{projectTitle}}</div>
+                <div class="subtitle">{{projectSubTitle}}</div>
+            </div>
+          </a>
+          {{topmenu}}
+      </header>
+
+      <div class="wrapper">
+          <!-- Navigation -->
+          <nav class="sidebar">
+              <div class="inner">
+                  <input id="searchbox" class="searchbox" type="text" name="searchbox" value="" placeholder="Suche...">
+                  <div id="sidebar-list">
+                    {{mainmenu}}
+                  </div>
+              </div>
+          </nav>
+          <main class="content">
+              <a id="print-button" href="javascript:window.print()"><i class="fa fa-print " aria-hidden="true"></i></a>
+              {{body}}
+          </main>
+      </div>
+      <script type="text/javascript" src="scripts/main.js"></script>
+  </div>
+</body>

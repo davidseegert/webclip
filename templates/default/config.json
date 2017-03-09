@@ -1,0 +1,10 @@
+{
+  "parse":["styles"],
+  "copy":["scripts","libraries","fonts"],
+  "variables":{
+    "color":"#abcdef",
+    "projectTitle":"Project Title",
+    "projectSubTitle":"Subtitle",
+    "tags":[]
+  }
+}

@@ -1,0 +1,302 @@
+/* Key-Color {{ color }} */
+
+#wrapper{
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  display:flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: absolute;
+}
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0px;
+    height: 100%;
+}
+.wrapper{
+  flex: 1;
+  display:flex;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+header{
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+    background-color: #ffffff;
+    border-left: 8px solid {{color}};
+}
+
+.content{
+  overflow-y: scroll;
+  flex: 1;
+  padding:  40px;
+  position: relative;
+}
+
+.hidden{
+  display:none!important;
+}
+
+header .logo{
+    padding:10px;
+    padding-left:30px;
+}
+
+header .logo .title{
+    font-family: 'Source Serif Pro', Serif;
+    font-size: 1.5em;
+    font-weight: 800;
+    color: {{ color }};
+    margin-bottom:-5px;
+}
+
+header .logo .subtitle{
+    font-size: 1em;
+    color: #555555;
+    min-width: 1px;
+    min-height: 18px;
+}
+
+header .logo{
+  float:left;
+}
+
+header .topmenu{
+  margin-top:22px;
+  float:right;
+  list-style:none;
+  margin-right: 40px;
+}
+
+header .topmenu li{
+  float:left;
+  margin-left: 10px;
+}
+
+header .topmenu a{
+  color: gray;
+  text-decoration: none;
+}
+
+header .topmenu a:hover{
+  text-decoration: underline;
+}
+
+
+.searchbox{
+  display:block;
+  width: 100%;
+  padding: 5px;
+  font-family: 'Source Sans Pro';
+  font-size: 1em;
+  box-shadow: inset 0px 1px 3px rgba(0,0,0,0.1);
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Source Serif Pro', Serif;
+}
+
+h1{
+    color: {{ color }};
+    font-size: 2em;
+}
+
+h1 .subtitle{
+    display:block;
+    color: #999;
+    font-size: 0.5em;
+}
+
+.sidebar{
+    width: 400px;
+    overflow-y:scroll;
+}
+
+
+.sidebar .inner{
+    padding: 40px;
+}
+
+.sidebar ul{
+    list-style:none;
+    padding:0px;
+    font-size: 0.95em;
+}
+
+.sidebar a{
+    text-decoration: none;
+    color: #333;
+    font-size: 1em;
+    display:inline-block;
+    padding: 2px 0px;
+}
+
+.sidebar a:hover{
+    text-decoration:underline;
+}
+
+a.active{
+  text-decoration: underline!important;
+}
+
+.search-alias{
+  color: gray;
+  font-size: 0.8em;
+}
+
+.command,pre,code{
+  font-family: monospace;
+  color: 333333;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+}
+
+pre code, .command code{
+  border: 0px!important;
+  margin: 0px!important;
+  padding: 0px!important;
+}
+
+th.command{
+    font-family: inherit;
+    border: 0px;
+    border-right: 1px solid #ddd;
+}
+
+.content span[lang]{
+  border: none;
+  background-color: transparent;
+  display: inline-block;
+}
+
+/*
+.content span{
+  margin: 0px 4px;
+  display: inline-block;
+}
+
+.content span[class]{
+  margin: 0;
+  display: inline;
+  color: inherit;;
+  background-color: transparent;;
+  border: none;
+}
+*/
+
+.content .command{
+  padding: 11px;
+}
+
+.content code{
+  padding: 0px 4px;
+  margin: 0px 4px;
+}
+
+.content pre{
+  padding: 11px;;
+}
+
+
+table{
+  border-spacing: 0px;
+  border: 1px solid #ddd;
+}
+
+
+td.command{
+  border-spacing: 10px;
+  border: 0px;
+  padding: 3px!important;
+  border-right: 1px solid #DDDDDD;
+}
+
+.sperr{
+  font-style: italic;
+}
+
+
+#print-button{
+    background-color: {{ color }};
+    color: white;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.5);
+    border-radius: 50%;
+    padding: 8px 10px;
+    float:right;
+    right: 40px;
+}
+
+@media print {
+
+  body{
+    margin-left: 50px;
+  }
+
+  #wrapper,.wrapper,.content,html,body{
+    height: auto;
+    overflow: auto;
+    overflow-y: auto;
+    display: block;
+    position: relative;
+  }
+
+  h1{
+    font-size: 1.1em;
+    color: black;
+  }
+  header,.sidebar,#print-button{
+    display:none;
+  }
+  .content{
+    width: auto;
+    margin: 0px;
+  }
+}
+
+
+/*
+* Responsive
+*/
+
+@media only screen and (max-width: 768px){
+
+  .nav-toggle{
+    font-size: 2em;
+    float:left;
+    margin-left: 0.5em;
+    color: gray;
+    position: absolute;
+    cursor: pointer;
+  }
+
+  .content,.sidebar,.wrapper,wrapper{
+    overflow-y: auto;
+    height: auto;
+    display: block;
+  }
+
+  header .logo{
+    margin-left: 4em;
+    padding: 0px;
+    padding-top: 0.6em;
+  }
+
+  header .logo .subtitle{
+    display: none;
+  }
+
+  header .topmenu{
+    float:left;
+    padding: 0px;
+    padding-left: 0.5em;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #wrapper{
+    height: auto;
+  }
+}

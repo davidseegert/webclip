@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Source Serif Pro';
+  font-weight: 700;
+  font-style: normal;
+  src: url('../fonts/Source-Serif-Pro-700/Source-Serif-Pro-700.eot');
+  src: url('../fonts/Source-Serif-Pro-700/Source-Serif-Pro-700.eot?#iefix') format('embedded-opentype'),
+       local('Source Serif Pro Bold'),
+       local('Source-Serif-Pro-700'),
+       url('../fonts/Source-Serif-Pro-700/Source-Serif-Pro-700.woff2') format('woff2'),
+       url('../fonts/Source-Serif-Pro-700/Source-Serif-Pro-700.woff') format('woff'),
+       url('../fonts/Source-Serif-Pro-700/Source-Serif-Pro-700.ttf') format('truetype'),
+       url('../fonts/Source-Serif-Pro-700/Source-Serif-Pro-700.svg#SourceSerifPro') format('svg');
+}
