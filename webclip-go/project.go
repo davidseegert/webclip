@@ -43,13 +43,13 @@ func NewProject(path string) *Project {
 	configPath := filepath.Join(path, "config.json")
 	contents, err := ioutil.ReadFile(configPath)
 	if err != nil {
-		fmt.Printf("Der Projekt-Ordner \"%s\" enthält keine config.json Datei\n", path)
+		fmt.Printf("The project folder \"%s\" does not contain a config.json file.\n", path)
 		return nil
 	}
 
 	var config ProjectConfig
 	if err := json.Unmarshal(contents, &config); err != nil {
-		fmt.Printf("Der Projekt-Ordner \"%s\" enthält eine ungültige config.json Datei\n", path)
+		fmt.Printf("The project folder \"%s\" contains an invalid config.json file.\n", path)
 		return nil
 	}
 
@@ -74,7 +74,7 @@ func (p *Project) GetMenus() {
 		html := string(content)
 
 		// Title
-		title := "! [h1] fehlt"
+		title := "! [h1] missing"
 		reTitle := regexp.MustCompile("(?i)<title>(.*?)</title>")
 		if match := reTitle.FindStringSubmatch(html); len(match) > 1 {
 			title = match[1]
@@ -258,7 +258,7 @@ func sanitizeForSort(s string) string {
 }
 
 func (p *Project) CreateSearch() {
-	fmt.Println("Erstelle Suche...")
+	fmt.Println("Creating search...")
 	searchData := make(map[string]map[string]interface{})
 
 	for _, file := range p.ParseFiles {
@@ -278,7 +278,7 @@ func (p *Project) CreateSearch() {
 		if match := reTitle.FindStringSubmatch(html); len(match) > 1 {
 			title = match[1]
 		} else {
-			Printh(fmt.Sprintf("Es scheint als hätte die Datei \"%s\" kein <title>-Tag.", file))
+			Printh(fmt.Sprintf("It seems the file \"%s\" has no <title> tag.", file))
 		}
 
 		var tags []string
@@ -334,7 +334,7 @@ func (p *Project) Render() string {
 
 	for _, file := range p.ParseFiles {
 		Clear()
-		fmt.Println("Erstelle Datei:")
+		fmt.Println("Creating file:")
 		fmt.Println(file)
 
 		currentHref := file[len(p.OutputPath):]

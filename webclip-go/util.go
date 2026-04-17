@@ -76,7 +76,7 @@ func Clear() {
 // Printh (Helper for printing error headers, though Ruby used printe)
 func Printh(message string) {
 	fmt.Println("")
-	fmt.Println("=== FEHLER ===")
+	fmt.Println("=== ERROR ===")
 	fmt.Println(message)
 	fmt.Println("==============")
 	fmt.Println("")

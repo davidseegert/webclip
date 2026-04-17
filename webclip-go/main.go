@@ -26,10 +26,10 @@ func main() {
 
 	Clear()
 	fmt.Println("+-------------------------------+")
-	fmt.Println("| Projekt erfolgreich erstellt! |")
+	fmt.Println("| Project successfully created! |")
 	fmt.Println("+-------------------------------+")
 	fmt.Println("")
-	fmt.Println("Output-Ordner:")
+	fmt.Println("Output folder:")
 	
 	absPath, _ := filepath.Abs(".")
 	fmt.Printf("%s/%s\n", absPath, outpath)

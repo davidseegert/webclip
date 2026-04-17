@@ -27,10 +27,10 @@ func (pm *ProjectManager) Init() error {
 	// Loading configuration
 	contents, err := ioutil.ReadFile("config.json")
 	if err != nil {
-		fmt.Println("=== FEHLER ===")
-		fmt.Println("Die Datei \"config.json\" im Hauptverzeichnis wurde nicht gefunden.")
-		fmt.Println("1) Stellen Sie sicher, dass die Datei existiert.")
-		fmt.Println("2) Stellen Sie sicher, dass das Script aus dem Hauptverzeichnis heraus gestartet wurde.")
+		fmt.Println("=== ERROR ===")
+		fmt.Println("The file \"config.json\" was not found in the main directory.")
+		fmt.Println("1) Make sure the file exists.")
+		fmt.Println("2) Make sure the script was started from the main directory.")
 		fmt.Println("==============")
 		return err
 	}
@@ -38,9 +38,9 @@ func (pm *ProjectManager) Init() error {
 	var config Config
 	err = json.Unmarshal(contents, &config)
 	if err != nil {
-		fmt.Println("=== FEHLER ===")
-		fmt.Println("Die Datei \"config.json\" im Hauptverzeichnis konnte nicht richtig eingelesen werden.")
-		fmt.Println("Stellen Sie sicher, dass die Datei nur valides JSON enthält.")
+		fmt.Println("=== ERROR ===")
+		fmt.Println("The file \"config.json\" in the main directory could not be read correctly.")
+		fmt.Println("Make sure the file contains only valid JSON.")
 		fmt.Println("==============")
 		return err
 	}
