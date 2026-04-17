@@ -1,0 +1,10 @@
+{
+  "name": "Tutorial-Demo",
+  "template": "default",
+  "variables": {
+    "projectTitle": "Stata Tutorial",
+    "projectSubTitle": "Custom Navigation Demo",
+    "topics": ["Einführung", "Datenmanagement", "Analysen"]
+  },
+  "parse": ["*.html"]
+}

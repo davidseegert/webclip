@@ -1,0 +1,10 @@
+{
+  "name": "Lexikon-Demo",
+  "template": "default",
+  "variables": {
+    "projectTitle": "Methoden-Lexikon",
+    "projectSubTitle": "Demo für Webclip Go",
+    "titlePrefix": "Lexikon: "
+  },
+  "parse": ["*.html"]
+}
