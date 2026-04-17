@@ -1,3 +1,22 @@
-projects
-ruby-2.2.5-x64-mingw32
-w.cmd
+# Webclip Go Port
+webclip-go/webclip
+webclip-go/webclip.exe
+webclip-go/bin/
+
+# Original Ruby Project
+webclip-ruby/ruby-2.2.5-x64-mingw32
+webclip-ruby/w.cmd
+
+# Generated Output (recursively)
+**/output/
+**/search.json
+
+# OS specific files
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Project Sources
+# (Uncomment the line below if you want to ignore all projects entirely)
+# projects/
